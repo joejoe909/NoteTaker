@@ -1,0 +1,22 @@
+{
+  "name": "notetaker",
+  "version": "1.0.0",
+  "description": "Application that can be used to writ, save and delete notes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joejoe909/NoteTaker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joejoe909/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/joejoe909/NoteTaker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
