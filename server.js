@@ -34,7 +34,7 @@ app.post("/api/notes", function (req, res) {
     console.log("app.post");
     noteHolder.push(newNote);
     console.log(newNote);
-    res.json(newNote);
+    res.json(noteHolder);
     fs.writeFile(__dirname + "/db/db.json", JSON.stringify(noteHolder), 'utf8', (err) =>{
         if(err){ throw err;}
         console.log("saved to db.json");
@@ -49,8 +49,6 @@ app.get("/notes", function (req, res) {
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "./public/index.html"));
 });
-
-
 
 // Starts the server to begin listening
 // =============================================================
