@@ -35,7 +35,10 @@ app.post("/api/notes", function (req, res) {
     noteHolder.push(newNote);
     console.log(newNote);
     res.json(newNote);
-    fs.writeFile('')
+    fs.appendFile(__dirname + "/db/db.json", JSON.stringify(newNote), 'utf8', (err) =>{
+        if(err){ throw err;}
+        console.log("saved to db.json");
+    });
 });
 
 // html routes
