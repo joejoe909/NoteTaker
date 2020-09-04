@@ -6,7 +6,7 @@ let app = express();
 const { v4: uuidv4 } = require("uuid");
 uuidv4();
 let PORT = process.env.PORT || 3000;
-const notesHolder; //we will fill this in with data from db.json
+let notesHolder; //we will fill this in with data from db.json
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -51,7 +51,7 @@ app.delete("/api/notes/:id", async function(req, res){
                 notes = notes.filter((note) => note.id !== id );
                 const strData = JSON.stringify(notes, null, 2);
                 await fs.promises.writeFile(__dirname + "/db/db.json", strData);
-                
+                res.json(true);
         }catch(err){
             res.status(500).end()
         };
