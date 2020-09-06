@@ -6,7 +6,7 @@ let app = express();
 const { v4: uuidv4 } = require("uuid");
 uuidv4();
 let PORT = process.env.PORT || 3000;
-let notesHolder; //we will fill this in with data from db.json
+let notesHolder= new Array; //we will fill this in with data from db.json
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -44,7 +44,7 @@ app.post("/api/notes", function (req, res) {
 
 
 app.delete("/api/notes/:id", async function(req, res){
-    try{ 
+    try{
         const {id} = req.params;
                 const data = await fs.promises.readFile(__dirname + "/db/db.json", "utf8");
                 let notes = JSON.parse(data);
@@ -55,6 +55,7 @@ app.delete("/api/notes/:id", async function(req, res){
         }catch(err){
             res.status(500).end()
         };
+        
 })
 
 // html routes
