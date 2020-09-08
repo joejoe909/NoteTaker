@@ -8,14 +8,12 @@ A simple app that can take and store notes. Note Taker utilizes node.js and expr
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#Questions)
 
 ## Installation
 
 The package requires Node.js, Express server, and Uuid. It also requires Bootstrap and jQuery for the front end code.
 <img src = "./img/nt1.png">
 
+## Usage
+<img src = "./img/nt2.png">
+<img src = "./img/nt3.png">
